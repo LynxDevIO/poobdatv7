@@ -7,37 +7,76 @@ import java.sql.SQLException;
 public final class DbConnection {
     private static volatile DbConnection instance;
     private static Connection connection;
-    public static boolean conectado;
+    private static boolean conectado = false;
 
-    private DbConnection()  {
+    private DbConnection() {
+        conectar();
+    }
+
+    private void conectar() {
         try {
-            conectar();
+            String URL = "jdbc:postgresql://localhost/formulario";
+            String USER = "postgres";
+            String PASS = "postgres";
+
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection(URL, USER, PASS);
             conectado = true;
         } catch (ClassNotFoundException | SQLException e) {
             conectado = false;
         }
     }
 
-    private void conectar() throws ClassNotFoundException, SQLException {
-        String URL = "jdbc:postgresql://localhost/formulario";
-        String USER = "postgres";
-        String PASS = "postgres";
-        Class.forName("org.postgresql.Driver");
-        connection = DriverManager.getConnection(URL, USER, PASS);
+    private static boolean verificarConexao() {
+        if (connection != null) {
+            try {
+                if (connection.isValid(1)) {
+                    conectado = true;
+                    return true;
+                }
+            } catch (SQLException e) {
+                conectado = false;
+            }
+        }
+        return reconectar();
+    }
+
+    private static synchronized boolean reconectar() {
+        if (connection != null) {
+            fecharConexao();
+        }
+
+        try {
+            instance.conectar();
+            return conectado;
+        } catch (Exception e) {
+            conectado = false;
+            return false;
+        }
+    }
+
+    public static void fecharConexao() {
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                connection = null;
+                conectado = false;
+            }
+        }
     }
 
     public static DbConnection getInstance() {
-        DbConnection i = instance;
-        if (i != null) {
-            return i;
-        }
-
-        synchronized (DbConnection.class) {
-            if (instance == null) {
-                instance = new DbConnection();
+        if (instance == null) {
+            synchronized (DbConnection.class) {
+                if (instance == null) {
+                    instance = new DbConnection();
+                }
             }
-            return instance;
         }
+        return instance;
     }
 
     public Connection getConnection() {
@@ -45,6 +84,6 @@ public final class DbConnection {
     }
 
     public static boolean isConectado() {
-        return conectado;
+        return verificarConexao();
     }
 }

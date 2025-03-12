@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac46cdfa-c488-4407-9fa2-efaccd129a33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/dao/IUsuarioDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/dao/UsuarioDAO.java" afterDir="false" />
+    <list default="true" id="ac46cdfa-c488-4407-9fa2-efaccd129a33" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/dao/IUsuarioDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/dao/UsuarioDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/database/DbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/dto/UsuarioDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/dto/UsuarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/phil/poobdatv7/view/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dev/phil/poobdatv7/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dev/phil/poobdatv7/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,11 +95,24 @@
       <option name="presentableId" value="Default" />
       <updated>1741730513754</updated>
       <workItem from="1741744129130" duration="195000" />
-      <workItem from="1741782095220" duration="5718000" />
+      <workItem from="1741782095220" duration="11409000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1741788177408</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741788177408</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
